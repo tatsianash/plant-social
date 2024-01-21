@@ -5,5 +5,17 @@
 			"id": "1",
 			"displayName": "Ficus Fan"
 		}
-	}
+	},
+	"users": [
+		{
+			"id": 1,
+			"displayName": "Ficus Fan",
+			"friends": [{ "id": 2, "displayName": "Cactus Fan" }]
+		},
+		{
+			"id": 2,
+			"displayName": "Cactus Fan",
+			"friends": [{ "id": 1, "displayName": "Ficus Fan" }]
+		}
+	]
 }
