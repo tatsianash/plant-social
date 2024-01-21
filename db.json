@@ -22,5 +22,30 @@
 			"displayName": "Rare Korean imports",
 			"friends": [{ "id": 2, "displayName": "Cactus Fan" }]
 		}
+	],
+
+	"posts": [
+		{
+			"id": "1",
+			"title": "Searching for Ficus",
+			"content": "Searching for a starter plant",
+			"author": {
+				"id": "1",
+				"displayName": "Ficus Fan"
+			},
+			"likesCount": 2,
+			"commentsCount": 0
+		},
+		{
+			"id": 2,
+			"title": "Cactus available",
+			"content": "Cactus available for sale, please contact me. ",
+			"author": {
+				"id": "2",
+				"displayName": "Cactus Fan"
+			},
+			"likesCount": 2,
+			"commentsCount": 0
+		}
 	]
 }
