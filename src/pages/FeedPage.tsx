@@ -1,7 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "react-router-dom";
+
 import React from "react";
 import { fetchPosts, postsQueryKey } from "../api/api";
-import { Card, CardContent, Stack, Typography } from "@mui/material";
+import { Button, Card, CardContent, Stack, Typography } from "@mui/material";
 
 const FeedPage = () => {
 	const { data, isLoading, isError, isSuccess } = useQuery({
@@ -25,6 +27,15 @@ const FeedPage = () => {
 							<Typography variant="h5" fontWeight="bold" color="primary">
 								{post.title} by {post.author.displayName}
 							</Typography>
+							<Button
+								color="secondary"
+								variant="outlined"
+								component={Link}
+								to={`/post/${post.id}`}
+								sx={{ mt: 2 }}
+							>
+								View Post
+							</Button>
 						</CardContent>
 					</Card>
 				))}

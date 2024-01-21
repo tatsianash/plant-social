@@ -21,3 +21,9 @@ export const postsQueryKey = ["posts"];
 export const fetchPosts = (): Promise<Post[]> => {
 	return axios.get("http://localhost:3000/posts").then((res) => res.data);
 };
+
+export const postIdQueryKey = ["post", "id"];
+export const fetchPostById = (id: string | undefined): Promise<Post | undefined> => {
+	if (!id) return Promise.resolve(undefined);
+	return axios.get(`http://localhost:3000/posts?id=${id}`).then((res) => res?.data[0]);
+};

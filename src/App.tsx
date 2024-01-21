@@ -4,6 +4,7 @@ import FeedPage from "./pages/FeedPage";
 import UserPage from "./pages/UserPage";
 import DetailsLayout from "./layouts/DetailsLayout";
 import GroupsPage from "./pages/GroupsPage";
+import PostPage from "./pages/PostPage";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 
 				<Route element={<DetailsLayout />}>
 					<Route path="/user/:id" element={<UserPage />} />
+					<Route path="/post/:id" element={<PostPage />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
