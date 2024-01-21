@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { fetchUserById, userIdQueryKey } from "../api/api";
-import { Card, CardContent, Typography } from "@mui/material";
+import UserDetails from "../components/users/UserDetails";
 
 const UserPage = () => {
 	const { id } = useParams();
@@ -25,18 +25,7 @@ const UserPage = () => {
 	}
 
 	if (isSuccess) {
-		return (
-			<Card>
-				<CardContent>
-					<Typography variant="h5" fontWeight="bold" color="primary">
-						{user.displayName}
-					</Typography>
-					<Typography variant="subtitle1" color="secondary">
-						Friends count: {user.friends.length}
-					</Typography>
-				</CardContent>
-			</Card>
-		);
+		return <UserDetails user={user} />;
 	}
 };
 

@@ -14,4 +14,5 @@ export type Post = {
 	commentsCount: number;
 	tags: Tag[];
 	imageUrl?: string;
+	createdAt: string;
 };

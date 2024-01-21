@@ -10,12 +10,22 @@
 		{
 			"id": 1,
 			"displayName": "Ficus Fan",
-			"friends": [{ "id": 2, "displayName": "Cactus Fan" }]
+			"friends": [{ "id": 2, "displayName": "Cactus Fan" }],
+			"posts": [
+				{
+					"id": "1",
+					"title": "Searching for Ficus",
+					"createdAt": "2024-01-01T00:00:00.000Z"
+				}
+			]
 		},
 		{
 			"id": 2,
 			"displayName": "Cactus Fan",
-			"friends": [{ "id": 1, "displayName": "Ficus Fan" }]
+			"friends": [{ "id": 1, "displayName": "Ficus Fan" }],
+			"posts": [
+				{ "id": 2, "title": "Cactus available", "createdAt": "2023-12-01T00:00:00.000Z" }
+			]
 		},
 		{
 			"id": 3,
@@ -36,7 +46,8 @@
 			"likesCount": 2,
 			"commentsCount": 0,
 			"tags": [{ "id": 5, "label": "Looking for a plant" }],
-			"imageUrl": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+			"imageUrl": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6",
+			"createdAt": "2024-01-01T00:00:00.000Z"
 		},
 		{
 			"id": 2,
@@ -52,7 +63,8 @@
 				{ "id": 3, "label": "Available for sale" },
 				{ "id": 4, "label": "Available for trade" }
 			],
-			"imageUrl": "https://images.unsplash.com/photo-1508022713622-df2d8fb7b4cd"
+			"imageUrl": "https://images.unsplash.com/photo-1508022713622-df2d8fb7b4cd",
+			"createdAt": "2023-12-01T00:00:00.000Z"
 		}
 	],
 	"tags": [
