@@ -16,6 +16,11 @@
 			"id": 2,
 			"displayName": "Cactus Fan",
 			"friends": [{ "id": 1, "displayName": "Ficus Fan" }]
+		},
+		{
+			"id": 3,
+			"displayName": "Rare Korean imports",
+			"friends": [{ "id": 2, "displayName": "Cactus Fan" }]
 		}
 	]
 }
