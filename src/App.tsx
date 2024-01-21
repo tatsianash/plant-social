@@ -1,18 +1,22 @@
-import { Typography } from "@mui/material";
-import useSession from "./hooks/useSession";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import FeedPage from "./pages/FeedPage";
+import UserPage from "./pages/UserPage";
+import DetailsLayout from "./layouts/DetailsLayout";
 
 function App() {
-	const { session } = useSession();
-
 	return (
-		<>
-			<Typography variant="h1" color="primary">
-				The Plant Stand
-			</Typography>
-			<Typography variant="subtitle1" color="secondary">
-				{session?.user?.displayName}
-			</Typography>
-		</>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<MainLayout />}>
+					<Route index element={<FeedPage />} />
+				</Route>
+
+				<Route element={<DetailsLayout />}>
+					<Route path="/user/:id" element={<UserPage />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
