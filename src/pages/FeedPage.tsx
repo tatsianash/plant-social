@@ -15,16 +15,18 @@ const FeedPage = () => {
 	if (isLoading) {
 		return <div>Loading...</div>;
 	}
-	if (!data || isError) {
+	if (isError) {
+		return <div>Posts not found. Please try again</div>;
+	}
+	if (isSuccess && data?.length === 0) {
 		return <div>Posts not found. Please try again</div>;
 	}
 
-	if (isSuccess) {
+	if (isSuccess && data) {
 		return (
 			<Stack spacing={4} padding={2} width={"100%"}>
-				{data.map((post) => (
-					<PostPreview key={post.id} post={post} />
-				))}
+				{Array.isArray(data) &&
+					data.map((post) => <PostPreview key={post.id} post={post} />)}
 			</Stack>
 		);
 	}

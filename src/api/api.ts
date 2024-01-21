@@ -25,5 +25,7 @@ export const fetchPosts = (): Promise<Post[]> => {
 export const postIdQueryKey = ["post", "id"];
 export const fetchPostById = (id: string | undefined): Promise<Post | undefined> => {
 	if (!id) return Promise.resolve(undefined);
-	return axios.get(`http://localhost:3000/posts?id=${id}`).then((res) => res?.data[0]);
+	return axios
+		.get(`http://localhost:3000/posts?id=${id}`)
+		.then((res) => res?.data[0] ?? {});
 };

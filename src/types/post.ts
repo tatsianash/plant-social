@@ -6,13 +6,13 @@ export type Post = {
 	id: string;
 	title: string;
 	content: string;
-	author: {
+	author?: {
 		id: string;
 		displayName: string;
 	};
-	likesCount: number;
-	commentsCount: number;
-	tags: Tag[];
+	likesCount?: number;
+	commentsCount?: number;
+	tags?: Tag[];
 	imageUrl?: string;
 	createdAt: string;
 };
