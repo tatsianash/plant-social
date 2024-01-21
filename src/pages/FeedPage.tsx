@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 import React from "react";
 import { fetchPosts, postsQueryKey } from "../api/api";
-import { Button, Card, CardContent, Stack, Typography } from "@mui/material";
+
+import PostPreview from "../components/posts/PostPreview";
+import { Stack } from "@mui/material";
 
 const FeedPage = () => {
 	const { data, isLoading, isError, isSuccess } = useQuery({
@@ -22,22 +24,7 @@ const FeedPage = () => {
 		return (
 			<Stack spacing={4} padding={2} width={"100%"}>
 				{data.map((post) => (
-					<Card key={post.id}>
-						<CardContent>
-							<Typography variant="h5" fontWeight="bold" color="primary">
-								{post.title} by {post.author.displayName}
-							</Typography>
-							<Button
-								color="secondary"
-								variant="outlined"
-								component={Link}
-								to={`/post/${post.id}`}
-								sx={{ mt: 2 }}
-							>
-								View Post
-							</Button>
-						</CardContent>
-					</Card>
+					<PostPreview key={post.id} post={post} />
 				))}
 			</Stack>
 		);

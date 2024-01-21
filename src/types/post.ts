@@ -1,3 +1,7 @@
+export type Tag = {
+	id: string;
+	label: string;
+};
 export type Post = {
 	id: string;
 	title: string;
@@ -8,4 +12,6 @@ export type Post = {
 	};
 	likesCount: number;
 	commentsCount: number;
+	tags: Tag[];
+	imageUrl?: string;
 };
